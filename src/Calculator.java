@@ -7,13 +7,20 @@ public class Calculator {
 		int first = scanner.nextInt();
 		System.out.println(first);
 
+		String symbol = scanner.next();
+		
 		System.out.println("µÎ ¹øÂ° ÀÔ·Â°ª : ");
 		int second = scanner.nextInt();
 		System.out.println(first);
 		
-		System.out.println("µ¡¼À : "+ (first+second));
-		System.out.println("»¬¼À : "+ (first-second));
-		System.out.println("³ª´°¼À : "+ (first*second));
-		System.out.println("°ö¼À : "+ (first/second));
+		if("+".equals(symbol)) {
+			System.out.println(first + symbol + second + "=" + (first+second));
+		} else if("-".equals(symbol)) {
+			System.out.println(first + symbol + second + "-" + (first-second));
+		} else if("*".equals(symbol)) {
+			System.out.println(first + symbol + second + "=" + (first*second));
+		} else if("/".equals(symbol)) {
+			System.out.println(first + symbol + second + "=" + (first/second));
+		} else { System.out.println("»çÄ¢¿¬»ê ±âÈ£°¡ ¾Æ´Õ´Ï´Ù."); }
 	}
 }
