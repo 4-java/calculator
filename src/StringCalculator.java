@@ -11,15 +11,13 @@ public class StringCalculator {
 		
 		int first = Integer.parseInt(values[0]);
 		
-		int i = 1;
 		int result = first;
 
-		while(i < values.length) {
+		for(int i=1;i< values.length;i+=2) {
 			String symbol = values[i];
 			System.out.println(symbol);
 			int second = Integer.parseInt(values[i+1]);
 			result = Calculator.calculate(result, symbol, second);
-			i = i + 2;
 		}
 	}
 }
